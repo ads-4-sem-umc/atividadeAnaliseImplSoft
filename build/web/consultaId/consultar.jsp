@@ -12,6 +12,8 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="../public/logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
     <title>Consulta produto por ID</title>
         <link
       rel="stylesheet"

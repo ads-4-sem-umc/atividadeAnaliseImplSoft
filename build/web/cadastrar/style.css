@@ -1,0 +1,48 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e6b56c;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000;
+}
+
+.logo {
+  width: 200px;
+  height: 150px;
+}
+
+.sign-out-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-line {
+  display: flex;
+  gap: 32px;
+}
+
+.button {
+  width: 100%;
+  margin-top: 32px;
+}

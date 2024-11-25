@@ -7,30 +7,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
   <head>
     <title>Controle de produtos</title>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./public/logo.png" type="image/png" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body
-    style="
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-    "
-  >
-    <h1>Nome e logo</h1>
-    <a href="cadastrar/index.html">Cadastrar produto</a>
-    <a href="editar/index.html">Editar produto</a>
-    <a href="excluir/index.html">Excluir produto por ID</a>
-    <a href="consultaId/index.html">Consulta de produto por ID</a>
-    <a href="consultaDescricao/index.html">Consulta de produto por descrição</a>
-    <a href="lista/index.jsp">Listagem de produtos</a>
+  <body>
+    <img src="./public/logo.png" alt="Logo" class="logo" />
+    <div class="menu-box-items">
+      <a href="cadastrar/index.html" class="link-item">
+        <img src="./public/plus-circle.png" />
+        Cadastrar produto</a
+      >
+      <a href="editar/index.html" class="link-item">
+        <img src="./public/pencil.png" />
+        Editar produto</a
+      >
+      <a href="excluir/index.html" class="link-item">
+        <img src="./public/x.png" />
+        Excluir produto por ID</a
+      >
+      <a href="consultaId/index.html" class="link-item">
+        <img src="./public/search-list.png" />
+        Consulta de produto por ID</a
+      >
+      <a href="consultaDescricao/index.html" class="link-item">
+        <img src="./public/search-file.png" />
+        Consulta de produto por descrição</a
+      >
+      <a href="lista/index.jsp" class="link-item">
+        <img src="./public/list.png" />
+        Listagem de produtos</a
+      >
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

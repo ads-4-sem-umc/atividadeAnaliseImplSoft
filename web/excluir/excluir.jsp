@@ -11,6 +11,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Excluir produto</title>
+    <link rel="shortcut icon" href="../public/logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
         <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -18,35 +20,21 @@
       crossorigin="anonymous"
     />
   </head>
-  <body style="display: flex; flex-direction: column; align-items: center; height: 100vh">
-      <a
-      href="../index.html"
-      style="
-        display: flex;
-        gap: 12px;
-        text-decoration: none;
-        color: #000;
-        width: 100%;
-      "
-    >
-      <img
-        src="../public/arrow-left.png"
-        alt="arrow left"
-        style="width: 32px; height: 32px"
-      />
-      <h2>Voltar</h2>
-    </a>
-    <div
-      style="
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 64px;
-      "
-    >   
-        <p style="font-size: 60px; font-weight: 700">
+  <body class="body-response">
+    <div class="nav-bar">
+      <a href="../index.html">
+        <img src="../public/logo.png" alt="Logo" class="logo" />
+      </a>
+      <a href="../index.html">
+        <img
+          src="../public/sign-out.png"
+          alt="arrow left"
+          class="sign-out-icon"
+        />
+      </a>
+    </div>
+    <div class="page-response">   
+        <p class="text-response">
             <%
             int id = Integer.parseInt(request.getParameter("id"));
             

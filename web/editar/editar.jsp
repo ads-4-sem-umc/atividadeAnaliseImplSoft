@@ -12,6 +12,8 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="../public/logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
     <title>Editar produto</title>
         <link
       rel="stylesheet"
@@ -20,35 +22,23 @@
       crossorigin="anonymous"
     />
   </head>
-  <body style="display: flex; flex-direction: column; align-items: center; height: 100vh">
-      <a
-      href="../index.html"
-      style="
-        display: flex;
-        gap: 12px;
-        text-decoration: none;
-        color: #000;
-        width: 100%;
-      "
-    >
-      <img
-        src="../public/arrow-left.png"
-        alt="arrow left"
-        style="width: 32px; height: 32px"
-      />
-      <h2>Voltar</h2>
-    </a>
+  <body class="body-response">
+    <div class="nav-bar">
+      <a href="../index.html">
+        <img src="../public/logo.png" alt="Logo" class="logo" />
+      </a>
+      <a href="../index.html">
+        <img
+          src="../public/sign-out.png"
+          alt="arrow left"
+          class="sign-out-icon"
+        />
+      </a>
+    </div>
     <div
-      style="
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 64px;
-      "
+      class="page-response"
     >   
-        <p style="font-size: 60px; font-weight: 700">
+        <p class="text-response">
             <%
             int id = Integer.parseInt( request.getParameter("id") );
             String descricao = request.getParameter("descricao");

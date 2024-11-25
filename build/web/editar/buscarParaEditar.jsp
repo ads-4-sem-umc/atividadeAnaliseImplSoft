@@ -12,6 +12,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../public/logo.png" type="image/png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Editar produto</title>
         <link
@@ -21,33 +23,22 @@
       crossorigin="anonymous"
     />
   </head>
-  <body style="display: flex; flex-direction: column; align-items: center; height: 100vh">
-      <a
-      href="../index.html"
-      style="
-        display: flex;
-        gap: 12px;
-        text-decoration: none;
-        color: #000;
-        width: 100%;
-      "
-    >
-      <img
-        src="../public/arrow-left.png"
-        alt="arrow left"
-        style="width: 32px; height: 32px"
-      />
-      <h2>Voltar</h2>
-    </a>
+  <body class="body">
+    <div class="nav-bar">
+      <a href="../index.html">
+        <img src="../public/logo.png" alt="Logo" class="logo" />
+      </a>
+      <a href="../index.html">
+        <img
+          src="../public/sign-out.png"
+          alt="arrow left"
+          class="sign-out-icon"
+        />
+      </a>
+    </div>
+    <h1>Editar produto por ID</h1>
     <div
-      style="
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 64px;
-      "
+        class="form-page"
     >   
         <%
             int id = Integer.parseInt(request.getParameter("id"));
@@ -60,9 +51,9 @@
         <form
           method="post"
           action="editar.jsp"
-          style="display: flex; flex-direction: column; align-items: center"
+          class="form-box"
         >
-          <div style="display: flex; gap: 32px">
+          <div class="form-line">
             <input type="hidden" id="inputId" name="id" value="<%=produtoEcontrado.getId()%>">
             <div class="form-group">
               <label for="inputDescricao">Descrição</label>
@@ -89,7 +80,7 @@
               />
             </div>
           </div>
-          <div style="display: flex; gap: 32px">
+          <div class="form-line">
             <div class="form-group">
               <label for="inputEstoque">Estoque</label>
               <input
@@ -115,7 +106,7 @@
               />
             </div>
           </div>
-          <div style="display: flex; gap: 32px">
+          <div class="form-line">
             <div class="form-group">
               <label for="inputCusto">Custo</label>
               <input
@@ -143,8 +134,7 @@
           </div>
           <button
             type="submit"
-            class="btn btn-primary"
-            style="width: 100%; margin-top: 32px"
+            class="btn btn-primary button"
           >
             Editar
           </button>
