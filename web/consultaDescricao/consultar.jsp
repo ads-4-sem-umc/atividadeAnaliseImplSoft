@@ -1,7 +1,7 @@
 <%-- 
     Document   : consultar
     Created on : 23 de nov. de 2024, 15:34:31
-    Author     : muralis
+    Author     : ruan
 --%>
 
 <%@page import="java.util.Optional"%>
@@ -13,6 +13,8 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" href="../public/logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
     <title>Consulta produto por nome</title>
         <link
       rel="stylesheet"
@@ -21,33 +23,20 @@
       crossorigin="anonymous"
     />
   </head>
-  <body style="display: flex; flex-direction: column; align-items: center; height: 100vh">
-      <a
-      href="../index.html"
-      style="
-        display: flex;
-        gap: 12px;
-        text-decoration: none;
-        color: #000;
-        width: 100%;
-      "
-    >
-      <img
-        src="../public/arrow-left.png"
-        alt="arrow left"
-        style="width: 32px; height: 32px"
-      />
-      <h2>Voltar</h2>
-    </a>
-    <div
-      style="
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >   
+  <body class="body">
+    <div class="nav-bar">
+      <a href="../index.html">
+        <img src="../public/logo.png" alt="Logo" class="logo" />
+      </a>
+      <a href="../index.html">
+        <img
+          src="../public/sign-out.png"
+          alt="arrow left"
+          class="sign-out-icon"
+        />
+      </a>
+    </div>
+    <div class="page-consultar">   
         <%
             String descricao = request.getParameter("descricao");
 
@@ -57,8 +46,8 @@
             Produto produtoEcontrado = produtoBuscado.get();
         %>
         <div>
-            <h1 style="margin-bottom: 32px">Produto encontrado</h1>
-            <div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%">
+            <h1 class="title-consultar">Produto encontrado</h1>
+            <div class="fields-consultar">
                 <p>ID: <%=produtoEcontrado.getId()%></p>
                 <p>Descrição: <%=produtoEcontrado.getDescricao()%></p>
                 <p>Código de barra: <%=produtoEcontrado.getCodigoBarra()%></p>

@@ -46,3 +46,26 @@
   width: 100%;
   margin-top: 32px;
 }
+
+.body-response {
+  background-color: #e6b56c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.page-response {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px;
+}
+
+.text-response {
+  font-size: 60px;
+  font-weight: 700;
+}
+

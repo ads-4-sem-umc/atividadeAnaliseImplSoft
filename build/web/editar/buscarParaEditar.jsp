@@ -36,7 +36,6 @@
         />
       </a>
     </div>
-    <h1>Editar produto por ID</h1>
     <div
         class="form-page"
     >   
@@ -48,6 +47,8 @@
             if(produtoBuscado.isPresent()){
             Produto produtoEcontrado = produtoBuscado.get();
         %>
+        <h1>Editar produto por ID</h1>
+
         <form
           method="post"
           action="editar.jsp"

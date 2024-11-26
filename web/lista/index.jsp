@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 23 de nov. de 2024, 15:54:50
-    Author     : muralis
+    Author     : ruan
 --%>
 
 <%@page import="model.Produto"%>
@@ -14,6 +14,8 @@
   <head>
     <title>Listagem de produtos</title>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="../public/logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -22,34 +24,20 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body style="display: flex; flex-direction: column; align-items: center">
-    <a
-      href="../index.html"
-      style="
-        display: flex;
-        gap: 12px;
-        text-decoration: none;
-        color: #000;
-        width: 100%;
-      "
-    >
-      <img
-        src="../public/arrow-left.png"
-        alt="arrow left"
-        style="width: 32px; height: 32px"
-      />
-      <h2>Voltar</h2>
-    </a>
-    <div
-        style="
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 64px;
-        gap: 32px;
-      "
-    >
+  <body class="body">
+    <div class="nav-bar">
+      <a href="../index.html">
+        <img src="../public/logo.png" alt="Logo" class="logo" />
+      </a>
+      <a href="../index.html">
+        <img
+          src="../public/sign-out.png"
+          alt="arrow left"
+          class="sign-out-icon"
+        />
+      </a>
+    </div>
+    <div class="page">
       <h1>Listagem de produtos</h1>
         <%                    
             ProdutoDAO produtoDAO = new ProdutoDAO();

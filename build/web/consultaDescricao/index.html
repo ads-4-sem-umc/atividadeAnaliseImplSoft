@@ -6,6 +6,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
   <head>
     <title>Consulta produto por descrição</title>
+    <link rel="shortcut icon" href="../public/logo.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
@@ -15,60 +17,37 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body style="display: flex; flex-direction: column; align-items: center">
-    <a
-      href="../index.html"
-      style="
-        display: flex;
-        gap: 12px;
-        text-decoration: none;
-        color: #000;
-        width: 100%;
-      "
-    >
-      <img
-        src="../public/arrow-left.png"
-        alt="arrow left"
-        style="width: 32px; height: 32px"
-      />
-      <h2>Voltar</h2>
-    </a>
-<div
-      style="
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 64px;
-        gap: 32px;
-      "
-    >
-      <h1>Editar produto por descrição</h1>
-      <form
-        method="post"
-        action="consultar.jsp"
-        style="display: flex; flex-direction: column; align-items: center"
-      >
-        <div style="display: flex; gap: 32px; align-items: flex-end">
+  <body class="body">
+    <div class="nav-bar">
+      <a href="../index.html">
+        <img src="../public/logo.png" alt="Logo" class="logo" />
+      </a>
+      <a href="../index.html">
+        <img
+          src="../public/sign-out.png"
+          alt="arrow left"
+          class="sign-out-icon"
+        />
+      </a>
+    </div>
+    <div class="page">
+      <h1>Consultar produto por descrição</h1>
+      <form method="post" action="consultar.jsp" class="form-box">
+        <div class="form-search-line">
           <div class="form-group">
             <label for="inputDescricao">Descrição</label>
             <input
               required
               type="text"
-              class="form-control"
+              class="form-control form-seach-field"
               id="inputDescricao"
               name="descricao"
               placeholder="Digite a descrição do produto"
-              style="width:200px"
             />
           </div>
-            <button
-              type="submit"
-              class="btn btn-primary"
-              style="width: 200px; height: fit-content; margin-bottom: 16px"
-            >
-              Consultar
-            </button>
+          <button type="submit" class="btn btn-primary button-search">
+            Consultar
+          </button>
         </div>
       </form>
     </div>

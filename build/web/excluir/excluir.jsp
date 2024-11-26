@@ -1,11 +1,6 @@
-<%-- 
-    Document   : excluir
-    Created on : 23 de nov. de 2024, 15:11:47
-    Author     : muralis
---%>
-
-<%@page import="dao.ProdutoDAO"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%-- Document : excluir Created on : 23 de nov. de 2024, 15:11:47 Author : ruan
+--%> <%@page import="dao.ProdutoDAO"%> <%@page contentType="text/html"
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,7 +8,7 @@
     <title>Excluir produto</title>
     <link rel="shortcut icon" href="../public/logo.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
-        <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -33,20 +28,19 @@
         />
       </a>
     </div>
-    <div class="page-response">   
-        <p class="text-response">
-            <%
-            int id = Integer.parseInt(request.getParameter("id"));
+    <div class="page-response">
+      <p class="text-response">
+        <% 
+            int id = Integer.parseInt(request.getParameter("id")); 
             
-            ProdutoDAO produtoDAO = new ProdutoDAO();
-            
+            ProdutoDAO produtoDAO = new ProdutoDAO(); 
             if(produtoDAO.excluir(id)){
                 out.println("Produto excluído com sucesso!");
-            }else{
-               out.println("Erro ao excluir produto!");
-            }
-            %>  
-        </p>
+            }else{ 
+                out.println("Erroao excluir produto!"); 
+            } 
+        %>
+      </p>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
