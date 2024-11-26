@@ -31,21 +31,27 @@ pageEncoding="UTF-8"%>
     </div>
     <div class="page-response">
       <p class="text-response">
-        <% int id = Integer.parseInt( request.getParameter("id") ); String
-        descricao = request.getParameter("descricao"); String codigoBarra =
-        request.getParameter("codigoBarra"); int estoque = Integer.parseInt(
-        request.getParameter("estoque") ); String nomeVendedor =
-        request.getParameter("nomeVendedor"); Double custo =
-        Double.parseDouble(request.getParameter("custo") ); Double valorVenda =
-        Double.parseDouble(request.getParameter("valorVenda") ); Produto produto
-        = new Produto(); produto.setId(id); produto.setDescricao(descricao);
-        produto.setCodigoBarra(codigoBarra); produto.setEstoque(estoque);
-        produto.setNomeVendedor(nomeVendedor);
-        produto.setCusto(BigDecimal.valueOf(custo));
-        produto.setValorVenda(BigDecimal.valueOf(valorVenda)); ProdutoDAO
-        produtoDAO = new ProdutoDAO(); if(produtoDAO.editar(produto)){
-        out.println("Produto editado com sucesso!"); }else{ out.println("Erro ao
-        editar produto!"); } %>
+        <% 
+            int id = Integer.parseInt( request.getParameter("id") ); 
+            String descricao = request.getParameter("descricao"); 
+            String codigoBarra = request.getParameter("codigoBarra"); 
+            int estoque = Integer.parseInt(request.getParameter("estoque") ); 
+            String nomeVendedor = request.getParameter("nomeVendedor"); 
+            Double custo = Double.parseDouble(request.getParameter("custo") );
+            Double valorVenda = Double.parseDouble(request.getParameter("valorVenda") ); 
+            Produto produto = new Produto(); 
+            produto.setId(id); 
+            produto.setDescricao(descricao);
+            produto.setCodigoBarra(codigoBarra); 
+            produto.setEstoque(estoque);
+            produto.setNomeVendedor(nomeVendedor);
+            produto.setCusto(BigDecimal.valueOf(custo));
+            produto.setValorVenda(BigDecimal.valueOf(valorVenda)); 
+            ProdutoDAO produtoDAO = new ProdutoDAO(); 
+            if(produtoDAO.editar(produto)){
+                out.println("Produto editado com sucesso!"); 
+            }else{ out.println("Erro ao editar produto!"); } 
+        %>
       </p>
     </div>
     <script
