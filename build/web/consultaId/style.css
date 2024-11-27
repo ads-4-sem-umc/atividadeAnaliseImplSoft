@@ -103,12 +103,12 @@
 }
 
 .title-consultar {
-  margin-bottom: 32px;
+  margin-bottom: 32px
 }
 
 .fields-consultar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 100%
 }
